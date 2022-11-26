@@ -9,3 +9,10 @@ unzip -o /tmp/cart.zip
 mv cart-main cart
 cd cart
 npm install
+
+sed -i -e 's/REDIS_ENDPOINT/redis.dbhavanibakka.online/' -e 's/CATALOGUE_ENDPOINT/catalogue.dbhvanibakka.online/' systemd.service
+
+mv /home/roboshop/cart /etc/systemd/system/cart.service
+systemctl daemon-reload
+systemctl restart cart/systemd.service
+systemctl enable cart
