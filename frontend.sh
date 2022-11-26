@@ -1,3 +1,4 @@
+echo -e 'e\[32minstall the nginx\'[0m
 yum install nginx -y
 systemctl enable nginx
 systemctl start nginx
