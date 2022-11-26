@@ -12,8 +12,10 @@ curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/fron
 
 cd /usr/share/nginx/html
 rm -rf *
+
 echo -e "\e[34frontend  unzip\e[0m"
 unzip -o /tmp/frontend.zip
+
 mv frontend-main/static/* .
 mv frontend-main/localhost.conf /etc/nginx/default.d/roboshop.conf
 
