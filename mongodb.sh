@@ -2,6 +2,7 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/robos
                                                                                                                           # systemctl enable mongod
                                                                                                                           # systemctl start mongod
 yum install -y mongodb-org
+
 systemctl enable mongod
 systemctl start mongod
 
